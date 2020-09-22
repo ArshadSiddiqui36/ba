@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Background Audio</title>
+</head>
+<body>
+
+	<script type="text/javascript">	
+		var audioElement = document.createElement("Audio");
+  		document.body.appendChild(audioElement);
+  		audioElement.innerText = "Sorry, your browser doesn't support HTML5!";
+
+		var audio = document.querySelector("audio");
+			audio.src = "Odhani - Made in China.mp3";
+			audio.play();
+			// audio.controls= true;
+			audio.loop = true;
+	</script>
+
+</body>
+</html>
