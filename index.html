@@ -43,15 +43,14 @@
 		// 	audio.loop = true;
 
 		function tapPlay() {
-
-			function gator() {
-				var btn = document.getElementById("btn");
+			var btn = document.getElementById("btn");
+			btn.classList.add("tap");
+			function gator() {	
 				audio.src = "SOUND OF PLEASURE.mp3";
 				audio.play= true;
 				audio.autoplay = true;
 				audio.loop = true;
 				// console.log("yes");
-				btn.classList.add("tap");
 				}
 
 			setTimeout(gator, 60000);
