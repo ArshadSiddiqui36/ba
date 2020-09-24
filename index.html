@@ -12,7 +12,16 @@
 			box-sizing: border-box;
 			width: 100%;
 			height: 100vh;
-			background: #3e3e3e;
+			/* background: #3e3e3e; */
+		}
+
+		.tap {
+			animation: tapResp 1s 1;
+		}
+
+		@keyframes tapResp {
+			0%{ background: #0f0;};
+			100%{ background: #fff;};
 		}
 
 	</style>
@@ -22,26 +31,26 @@
 	<div onclick="tapPlay()" id="btn"></div>
 
 	<script type="text/javascript">	
-		var btn = document.getElementById("btn");
+
 		var audioElement = document.createElement("Audio");
   		document.body.appendChild(audioElement);
   		audioElement.innerText = "Sorry, your browser doesn't support HTML5!";
-		
+
 		var audio = document.querySelector("audio");
 			audio.src = "Odhani - Made in China.mp3";
 			audio.play= true;
 			// audio.controls= true;
 			audio.autoplay = true;
 			audio.loop = true;
-			btn.style = "background: #fff";
 
 		function tapPlay() {
-			btn.style = "background: #fff";
+			var btn = document.getElementById("btn");
 			audio.src = "Odhani - Made in China.mp3";
 			audio.play= true;
 			audio.autoplay = true;
 			audio.loop = true;
 			// console.log("yes");
+			btn.classList.add("tap");
 		}
 
 	</script>
